@@ -71,10 +71,11 @@ int main(int argc, const char * argv[]) {
         tmp = head; 
         for(i=0;i<3;i++) {
             tmp->next = (NodePtr)malloc(sizeof(struct node));                                          //สร้าง 3 node ต่อท้าย
-            tmp=tmp->next;
-            tmp->value=i+3;                                                                            //ใส่ค่า i+3 ใน value
-            tmp->next=NULL;
+            tmp->value=i+3;  
+            tmp=tmp->next;                                                                             //ใส่ค่า i+3 ใน value
         }
+        tmp->value=i+3;  
+        tmp->next=NULL;
         for(tmp=head;tmp!=NULL;tmp=tmp->next)  {
                 printf("%3d", tmp->value);
         }
